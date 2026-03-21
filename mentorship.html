@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find a mentor or get in touch with AlumniConnect. Connect with experienced alumni for career guidance.">
+  <title>AlumniConnect — Mentorship & Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">🎓</div>
+        <span>AlumniConnect</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="mentorship.html" class="active">Mentorship</a></li>
+        <li class="nav-cta"><a href="login.html" class="btn btn-primary btn-sm">Join Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Mentorship & <span class="gradient-text">Contact</span></h1>
+      <p>Connect with experienced alumni mentors for guidance, or reach out to us for any queries.</p>
+    </div>
+  </section>
+
+  <!-- MENTORS SECTION -->
+  <section class="mentors-section container">
+    <div class="section-title" style="margin-bottom: 40px;">
+      <h2>Available Mentors</h2>
+      <p>Our mentors are industry leaders ready to guide you in your career journey.</p>
+    </div>
+    <div class="mentors-grid" id="mentorsGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Get In Touch</h2>
+        <p>Have questions or want to request a specific mentor? Reach out to us.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info glass-card">
+          <h3>Contact Information</h3>
+          <p>We'd love to hear from you! Whether you're an alumnus looking to contribute or a student seeking guidance.</p>
+          <div class="info-item">
+            <div class="icon">📧</div>
+            <div class="text">
+              <h4>Email</h4>
+              <p>alumni@university.edu</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">📞</div>
+            <div class="text">
+              <h4>Phone</h4>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">📍</div>
+            <div class="text">
+              <h4>Address</h4>
+              <p>Alumni Office, Main Campus, University Lane</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">🕐</div>
+            <div class="text">
+              <h4>Office Hours</h4>
+              <p>Mon - Fri, 9:00 AM - 5:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-card glass-card">
+          <h3 style="margin-bottom: 24px;">Send a Message</h3>
+          <form onsubmit="return handleContact(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input type="text" id="contactName" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" placeholder="you@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <select id="contactSubject" required>
+                <option value="">Select a topic</option>
+                <option>Mentorship Request</option>
+                <option>General Inquiry</option>
+                <option>Event Suggestion</option>
+                <option>Report an Issue</option>
+                <option>Partnership Opportunity</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" placeholder="Write your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about our mentorship and community programs.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I sign up as a mentor?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>To become a mentor, register on our platform and go to your profile settings. Toggle the "Available as Mentor" option, fill in your areas of expertise, and set your preferred availability. Students and recent graduates will then be able to find and connect with you.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Is the mentorship program free?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Our mentorship program is completely free for all registered alumni and students. It's our way of giving back to the community and fostering growth within our alumni network.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How are mentors matched with mentees?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Mentees can browse available mentors and choose based on their areas of interest, industry expertise, and availability. We also provide recommendations based on your profile and career goals.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I attend events without being a registered alumni?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Some events are open to all, while exclusive events like reunions and networking mixers require alumni registration. Check individual event pages for eligibility details.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How can I post a job on the job board?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Navigate to the Jobs page and click "Post a Job." Fill in the job details including title, company, description, and required skills. Your posting will be visible to all registered members immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-icon">✓</div>
+    <span id="toastMessage">Success!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">🎓</div>
+            <span>AlumniConnect</span>
+          </a>
+          <p>Building bridges between generations of graduates. Stay connected, grow together.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="directory.html">Alumni Directory</a>
+          <a href="jobs.html">Job Board</a>
+          <a href="events.html">Events</a>
+          <a href="mentorship.html">Mentorship</a>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="#">Success Stories</a>
+          <a href="#">Blog</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Donate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="mentorship.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 AlumniConnect. All rights reserved. Made with ❤️ for our alumni community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

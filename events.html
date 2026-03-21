@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stay updated on alumni events, reunions, guest lectures, and networking opportunities at AlumniConnect.">
+  <title>AlumniConnect — Events & Reunions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">🎓</div>
+        <span>AlumniConnect</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li class="nav-cta"><a href="login.html" class="btn btn-primary btn-sm">Join Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Events & <span class="gradient-text">Reunions</span></h1>
+      <p>Never miss a gathering. From grand reunions to insightful guest lectures, stay connected with what's happening.</p>
+    </div>
+  </section>
+
+  <!-- UPCOMING EVENTS -->
+  <section class="events-section container">
+    <div class="section-title" style="margin-bottom: 40px;">
+      <h2>Upcoming Events</h2>
+      <p>Mark your calendars for these exciting upcoming events.</p>
+    </div>
+    <div class="events-grid" id="eventsGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- PAST EVENTS GALLERY -->
+  <section class="past-events">
+    <div class="container">
+      <div class="section-title">
+        <h2>Memories from Past Events</h2>
+        <p>Relive the memorable moments from our previous gatherings.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-bg" style="background: linear-gradient(135deg, #4f46e5, #06b6d4);">🎓</div>
+          <div class="gallery-overlay">
+            <div><h4>Annual Reunion 2025</h4><p>500+ attendees</p></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-bg" style="background: linear-gradient(135deg, #0d9488, #059669);">🎤</div>
+          <div class="gallery-overlay">
+            <div><h4>Tech Talk Series</h4><p>AI & Machine Learning</p></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-bg" style="background: linear-gradient(135deg, #f59e0b, #f97316);">🏆</div>
+          <div class="gallery-overlay">
+            <div><h4>Sports Meet 2025</h4><p>Inter-batch Tournament</p></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-bg" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">🎵</div>
+          <div class="gallery-overlay">
+            <div><h4>Cultural Night 2025</h4><p>Music & Dance Festival</p></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-bg" style="background: linear-gradient(135deg, #ef4444, #f97316);">🤝</div>
+          <div class="gallery-overlay">
+            <div><h4>Networking Mixer</h4><p>Industry Connect</p></div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-bg" style="background: linear-gradient(135deg, #3730a3, #4f46e5);">📚</div>
+          <div class="gallery-overlay">
+            <div><h4>Workshop Series</h4><p>Career Development</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <div class="toast-icon">✓</div>
+    <span id="toastMessage">Success!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">🎓</div>
+            <span>AlumniConnect</span>
+          </a>
+          <p>Building bridges between generations of graduates. Stay connected, grow together.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="directory.html">Alumni Directory</a>
+          <a href="jobs.html">Job Board</a>
+          <a href="events.html">Events</a>
+          <a href="mentorship.html">Mentorship</a>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <a href="#">Success Stories</a>
+          <a href="#">Blog</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Donate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="mentorship.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 AlumniConnect. All rights reserved. Made with ❤️ for our alumni community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
