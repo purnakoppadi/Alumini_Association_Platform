@@ -1,13 +1,4 @@
-/* ============================
-   Alumni Association Platform
-   Shared JavaScript
-   ============================ */
-
-// ==========================================
-// DATA
-// ==========================================
-
-const alumniData = [
+var alumniData = [
   { name: "Ravi Patel", initials: "RP", role: "Software Architect", company: "Google", batch: "2016", dept: "Computer Science", location: "Bangalore", email: "ravi.patel@gmail.com", skills: ["Python", "System Design", "Cloud"] },
   { name: "Sneha Mehta", initials: "SM", role: "Data Scientist", company: "Amazon", batch: "2018", dept: "Computer Science", location: "Hyderabad", email: "sneha.m@outlook.com", skills: ["Machine Learning", "Python", "Statistics"] },
   { name: "Arjun Kumar", initials: "AK", role: "VP Engineering", company: "Microsoft", batch: "2008", dept: "Electronics", location: "San Francisco", email: "arjun.k@hotmail.com", skills: ["Leadership", "Cloud", "DevOps"] },
@@ -22,7 +13,7 @@ const alumniData = [
   { name: "Pooja Pillai", initials: "PP", role: "Research Scientist", company: "ISRO", batch: "2016", dept: "Mechanical", location: "Bangalore", email: "pooja.p@email.com", skills: ["MATLAB", "Simulation", "Aerospace"] }
 ];
 
-const jobsData = [
+var jobsData = [
   { title: "Senior Frontend Developer", company: "Google", logo: "G", type: "Full-time", location: "Bangalore", salary: "₹25L - ₹40L", tags: ["React", "TypeScript", "GraphQL"], posted: "2 days ago" },
   { title: "Data Science Intern", company: "Amazon", logo: "A", type: "Internship", location: "Hyderabad", salary: "₹50K/month", tags: ["Python", "ML", "SQL"], posted: "1 day ago" },
   { title: "Product Manager", company: "Microsoft", logo: "M", type: "Full-time", location: "Remote", salary: "₹30L - ₹45L", tags: ["Strategy", "Agile", "Analytics"], posted: "3 days ago" },
@@ -34,16 +25,16 @@ const jobsData = [
   { title: "Cloud Architect", company: "TCS", logo: "T", type: "Contract", location: "San Francisco", salary: "$150K - $200K", tags: ["Azure", "Terraform", "Security"], posted: "1 week ago" }
 ];
 
-const eventsData = [
-  { title: "Annual Alumni Grand Reunion 2026", desc: "Join us for the biggest reunion of the year! Meet batchmates, share memories, and celebrate our journey together.", date: "15", month: "Apr", time: "10:00 AM - 8:00 PM", venue: "University Main Auditorium", attendees: "500+", icon: "🎓", gradient: "linear-gradient(135deg, #4f46e5, #06b6d4)" },
-  { title: "Tech Talk: Future of AI & Robotics", desc: "An exclusive guest lecture by industry leaders discussing the latest advancements in AI, ML, and Robotics.", date: "22", month: "Apr", time: "2:00 PM - 5:00 PM", venue: "Online (Zoom)", attendees: "200+", icon: "🤖", gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)" },
-  { title: "Career Networking Mixer", desc: "A professional networking event to connect alumni with hiring companies and explore career opportunities.", date: "05", month: "May", time: "6:00 PM - 9:00 PM", venue: "Grand Hyatt, Mumbai", attendees: "150+", icon: "🤝", gradient: "linear-gradient(135deg, #0d9488, #059669)" },
-  { title: "Alumni Sports Tournament", desc: "Inter-batch cricket and football tournament. Form your teams and compete for the Alumni Trophy!", date: "18", month: "May", time: "8:00 AM - 6:00 PM", venue: "University Sports Complex", attendees: "300+", icon: "🏆", gradient: "linear-gradient(135deg, #f59e0b, #f97316)" },
-  { title: "Entrepreneurship Workshop", desc: "Learn from alumni who built successful startups. Interactive sessions on fundraising, product building, and scaling.", date: "02", month: "Jun", time: "10:00 AM - 4:00 PM", venue: "Innovation Hub, Campus", attendees: "100+", icon: "🚀", gradient: "linear-gradient(135deg, #ef4444, #ec4899)" },
-  { title: "Cultural Night & Music Fest", desc: "An evening of music, dance, and cultural performances by alumni and current students. Open mic included!", date: "20", month: "Jun", time: "5:00 PM - 11:00 PM", venue: "Open Air Theatre, Campus", attendees: "400+", icon: "🎵", gradient: "linear-gradient(135deg, #3730a3, #6366f1)" }
+var eventsData = [
+  { title: "Annual Alumni Grand Reunion 2026", desc: "Join us for the biggest reunion of the year! Meet batchmates and celebrate together.", date: "15", month: "Apr", time: "10:00 AM - 8:00 PM", venue: "University Main Auditorium", attendees: "500+", emoji: "🎓", bg: "linear-gradient(135deg, #6c63ff, #06b6d4)" },
+  { title: "Tech Talk: Future of AI & Robotics", desc: "An exclusive guest lecture by industry leaders on AI, ML, and Robotics.", date: "22", month: "Apr", time: "2:00 PM - 5:00 PM", venue: "Online (Zoom)", attendees: "200+", emoji: "🤖", bg: "linear-gradient(135deg, #8b5cf6, #ec4899)" },
+  { title: "Career Networking Mixer", desc: "A professional networking event to connect alumni with hiring companies.", date: "05", month: "May", time: "6:00 PM - 9:00 PM", venue: "Grand Hyatt, Mumbai", attendees: "150+", emoji: "🤝", bg: "linear-gradient(135deg, #0d9488, #059669)" },
+  { title: "Alumni Sports Tournament", desc: "Inter-batch cricket and football tournament. Compete for the Alumni Trophy!", date: "18", month: "May", time: "8:00 AM - 6:00 PM", venue: "University Sports Complex", attendees: "300+", emoji: "🏆", bg: "linear-gradient(135deg, #f59e0b, #f97316)" },
+  { title: "Entrepreneurship Workshop", desc: "Learn from alumni entrepreneurs. Sessions on fundraising, product building, and scaling.", date: "02", month: "Jun", time: "10:00 AM - 4:00 PM", venue: "Innovation Hub, Campus", attendees: "100+", emoji: "🚀", bg: "linear-gradient(135deg, #ef4444, #ec4899)" },
+  { title: "Cultural Night & Music Fest", desc: "Evening of music, dance, and cultural performances by alumni. Open mic included!", date: "20", month: "Jun", time: "5:00 PM - 11:00 PM", venue: "Open Air Theatre, Campus", attendees: "400+", emoji: "🎵", bg: "linear-gradient(135deg, #3730a3, #6c63ff)" }
 ];
 
-const mentorsData = [
+var mentorsData = [
   { name: "Arjun Kumar", initials: "AK", title: "VP Engineering", company: "Microsoft", expertise: ["Leadership", "Cloud Architecture", "System Design"], sessions: 85, rating: 4.9 },
   { name: "Sneha Mehta", initials: "SM", title: "Lead Data Scientist", company: "Amazon", expertise: ["Machine Learning", "AI Strategy", "Data Analytics"], sessions: 62, rating: 4.8 },
   { name: "Ravi Patel", initials: "RP", title: "Software Architect", company: "Google", expertise: ["Backend Systems", "Distributed Computing", "Mentoring"], sessions: 94, rating: 5.0 },
@@ -52,454 +43,585 @@ const mentorsData = [
   { name: "Meera Gupta", initials: "MG", title: "Marketing Director", company: "Zomato", expertise: ["Brand Strategy", "Digital Marketing", "Start-ups"], sessions: 38, rating: 4.6 }
 ];
 
-// ==========================================
-// NAVBAR
-// ==========================================
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Hamburger toggle
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    // Close on link click (mobile)
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
-  }
-
-  // Navbar scroll effect
-  const navbar = document.getElementById('navbar');
+var testimonials = [
+  { quote: "This platform helped me reconnect with my batchmates after 10 years. The networking events have been incredibly valuable for my career growth.", initials: "RP", name: "Ravi Patel", info: "Batch of 2014 · Software Architect at Google" },
+  { quote: "I found my current job through the alumni job board. The mentorship program also gave me the guidance I needed to transition into a new career.", initials: "SM", name: "Sneha Mehta", info: "Batch of 2018 · Data Scientist at Amazon" },
+  { quote: "Being a mentor on this platform has been incredibly rewarding. I love guiding the next generation of graduates and sharing my experiences.", initials: "AK", name: "Arjun Kumar", info: "Batch of 2008 · VP Engineering at Microsoft" }
+];
+window.onload = function() {
+  var navbar = document.getElementById("navbar");
   if (navbar) {
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
-    });
+    window.onscroll = function() {
+      if (window.scrollY > 50) {
+        navbar.className = "scrolled";
+        navbar.id = "navbar";
+        navbar.setAttribute("class", "scrolled");
+      } else {
+        navbar.removeAttribute("class");
+      }
+    };
   }
-
-  // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  if (reveals.length) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-    reveals.forEach(el => revealObserver.observe(el));
-  }
-
-  // Stats counter animation
-  const counters = document.querySelectorAll('.counter');
-  if (counters.length) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const counter = entry.target;
-          const target = +counter.dataset.target;
-          const duration = 2000;
-          const step = target / (duration / 16);
-          let current = 0;
-          const updateCounter = () => {
-            current += step;
-            if (current < target) {
-              counter.textContent = Math.ceil(current).toLocaleString();
-              requestAnimationFrame(updateCounter);
-            } else {
-              counter.textContent = target.toLocaleString() + '+';
-            }
-          };
-          updateCounter();
-          counterObserver.unobserve(counter);
-        }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(c => counterObserver.observe(c));
-  }
-
-  // Testimonial carousel
-  initTestimonials();
-
-  // Auth tabs
-  initAuthTabs();
-
-  // Render dynamic content based on page
-  renderProfiles();
-  renderJobs();
+  renderAlumniTable();
+  renderJobsTable();
   renderEvents();
   renderMentors();
-});
-
-// ==========================================
-// TESTIMONIALS CAROUSEL
-// ==========================================
-
-let currentSlide = 0;
-let testimonialInterval;
-
-function initTestimonials() {
-  const track = document.getElementById('testimonialTrack');
-  const dots = document.querySelectorAll('#testimonialDots .dot');
-  if (!track || !dots.length) return;
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      goToSlide(+dot.dataset.index);
-    });
-  });
-
-  testimonialInterval = setInterval(() => {
-    goToSlide((currentSlide + 1) % dots.length);
-  }, 5000);
+  var footerYear = document.getElementById("footerYear");
+  if (footerYear) {
+    var today = new Date();
+    var year = today.getFullYear();
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+    var currentMonth = monthNames[today.getMonth()];
+    var currentDate = today.getDate();
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+    var timeStr = (hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes;
+    footerYear.innerHTML = "© " + year + " AlumniConnect. All rights reserved. Made with ❤️ | Today: " + currentMonth + " " + currentDate + ", " + year + " | " + timeStr;
+  }
+  startTestimonialCarousel();
+};
+function toggleMenu() {
+  var navLinks = document.getElementById("navLinks");
+  if (navLinks.className.indexOf("open") === -1) {
+    navLinks.className = navLinks.className + " open";
+  } else {
+    navLinks.className = navLinks.className.substring(0, navLinks.className.indexOf(" open"));
+  }
 }
+var currentSlide = 0;
+var testimonialTimer = null;
 
 function goToSlide(index) {
-  const track = document.getElementById('testimonialTrack');
-  const dots = document.querySelectorAll('#testimonialDots .dot');
-  if (!track) return;
-
   currentSlide = index;
-  track.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  var quoteEl = document.getElementById("testimonialQuote");
+  var avatarEl = document.getElementById("testimonialAvatar");
+  var nameEl = document.getElementById("testimonialName");
+  var infoEl = document.getElementById("testimonialInfo");
+  var dotsEl = document.getElementById("testimonialDots");
 
-  clearInterval(testimonialInterval);
-  testimonialInterval = setInterval(() => {
-    goToSlide((currentSlide + 1) % dots.length);
+  if (!quoteEl) return;
+  quoteEl.innerHTML = testimonials[index].quote;
+  avatarEl.innerHTML = testimonials[index].initials;
+  nameEl.innerHTML = testimonials[index].name;
+  infoEl.innerHTML = testimonials[index].info;
+  if (dotsEl) {
+    var dots = dotsEl.getElementsByClassName("dot");
+    for (var i = 0; i < dots.length; i++) {
+      if (i === index) {
+        dots[i].className = "dot active";
+      } else {
+        dots[i].className = "dot";
+      }
+    }
+  }
+  if (testimonialTimer) {
+    clearTimeout(testimonialTimer);
+  }
+  testimonialTimer = setTimeout(function() {
+    var nextSlide = (currentSlide + 1) % testimonials.length;
+    goToSlide(nextSlide);
   }, 5000);
 }
 
-// ==========================================
-// AUTH TABS
-// ==========================================
+function startTestimonialCarousel() {
+  if (document.getElementById("testimonialQuote")) {
+    goToSlide(0);
+  }
+}
+function renderAlumniTable(data) {
+  var table = document.getElementById("alumniTable");
+  var noResults = document.getElementById("noResults");
+  if (!table) return;
+  if (data === undefined) {
+    data = alumniData;
+  }
+  while (table.rows.length > 1) {
+    table.deleteRow(1);
+  }
 
-function initAuthTabs() {
-  const loginTab = document.getElementById('loginTab');
-  const registerTab = document.getElementById('registerTab');
-  const loginForm = document.getElementById('loginForm');
-  const registerForm = document.getElementById('registerForm');
+  if (data.length === 0) {
+    table.style.display = "none";
+    if (noResults) noResults.style.display = "block";
+    return;
+  }
 
-  if (!loginTab || !registerTab) return;
+  table.style.display = "table";
+  if (noResults) noResults.style.display = "none";
+  for (var i = 0; i < data.length; i++) {
+    var row = table.insertRow(-1);
+    var person = data[i];
+    var cell0 = row.insertCell(0);
+    cell0.innerHTML = '<div class="table-avatar">' + person.initials + '</div>';
+    cell0.className = "avatar-cell";
+    var cell1 = row.insertCell(1);
+    cell1.innerHTML = '<strong style="color: #ffffff;">' + person.name + '</strong>';
+    var cell2 = row.insertCell(2);
+    cell2.innerHTML = person.role + ' at <span style="color: #818cf8;">' + person.company + '</span>';
+    var cell3 = row.insertCell(3);
+    cell3.innerHTML = person.batch;
+    var cell4 = row.insertCell(4);
+    cell4.innerHTML = person.dept;
+    var cell5 = row.insertCell(5);
+    cell5.innerHTML = "📍 " + person.location;
+    var cell6 = row.insertCell(6);
+    var skillsHtml = "";
+    var skillsList = person.skills;
+    for (var s = 0; s < skillsList.length; s++) {
+      skillsHtml = skillsHtml + '<span class="tag">' + skillsList[s] + '</span> ';
+    }
+    cell6.innerHTML = skillsHtml;
+    var cell7 = row.insertCell(7);
+    cell7.innerHTML = '<button class="btn-primary btn-sm" onclick="showProfile(' + i + ')">View</button>';
+  }
+}
+function filterDirectory() {
+  var searchVal = document.getElementById("directorySearch").value;
+  var batchVal = document.getElementById("filterBatch").value;
+  var deptVal = document.getElementById("filterDept").value;
+  var locationVal = document.getElementById("filterLocation").value;
+  searchVal = searchVal.toLowerCase().trim();
 
-  loginTab.addEventListener('click', () => {
-    loginTab.classList.add('active');
-    registerTab.classList.remove('active');
-    loginForm.classList.add('active');
-    registerForm.classList.remove('active');
-  });
+  var filtered = [];
+  for (var i = 0; i < alumniData.length; i++) {
+    var p = alumniData[i];
+    var matchSearch = true;
+    var matchBatch = true;
+    var matchDept = true;
+    var matchLoc = true;
+    if (searchVal.length > 0) {
+      var nameMatch = p.name.toLowerCase().indexOf(searchVal) !== -1;
+      var companyMatch = p.company.toLowerCase().indexOf(searchVal) !== -1;
+      var skillMatch = false;
+      for (var s = 0; s < p.skills.length; s++) {
+        if (p.skills[s].toLowerCase().indexOf(searchVal) !== -1) {
+          skillMatch = true;
+        }
+      }
+      matchSearch = nameMatch || companyMatch || skillMatch;
+    }
+    if (batchVal !== "") {
+      matchBatch = (p.batch === batchVal);
+    }
+    if (deptVal !== "") {
+      matchDept = (p.dept === deptVal);
+    }
+    if (locationVal !== "") {
+      matchLoc = (p.location === locationVal);
+    }
 
-  registerTab.addEventListener('click', () => {
-    registerTab.classList.add('active');
-    loginTab.classList.remove('active');
-    registerForm.classList.add('active');
-    loginForm.classList.remove('active');
-  });
+    if (matchSearch && matchBatch && matchDept && matchLoc) {
+      filtered.push(p);
+    }
+  }
+
+  renderAlumniTable(filtered);
+}
+function showProfile(index) {
+  var p = alumniData[index];
+  document.getElementById("modalName").innerHTML = p.name;
+  document.getElementById("modalAvatar").innerHTML = p.initials;
+  document.getElementById("modalRole").innerHTML = p.role;
+  document.getElementById("modalCompany").innerHTML = p.company;
+  document.getElementById("modalBatch").innerHTML = p.batch;
+  document.getElementById("modalDept").innerHTML = p.dept;
+  document.getElementById("modalLocation").innerHTML = p.location;
+  document.getElementById("modalEmail").innerHTML = p.email;
+  var skillsHtml = "";
+  for (var i = 0; i < p.skills.length; i++) {
+    skillsHtml = skillsHtml + '<span class="badge badge-primary" style="margin: 3px;">' + p.skills[i] + '</span>';
+  }
+  document.getElementById("modalSkills").innerHTML = skillsHtml;
+
+  openModal("profileModal");
+}
+function renderJobsTable(data) {
+  var table = document.getElementById("jobsTable");
+  var noResults = document.getElementById("noJobResults");
+  if (!table) return;
+
+  if (data === undefined) {
+    data = jobsData;
+  }
+  while (table.rows.length > 1) {
+    table.deleteRow(1);
+  }
+
+  if (data.length === 0) {
+    table.style.display = "none";
+    if (noResults) noResults.style.display = "block";
+    return;
+  }
+
+  table.style.display = "table";
+  if (noResults) noResults.style.display = "none";
+
+  for (var i = 0; i < data.length; i++) {
+    var row = table.insertRow(-1);
+    var job = data[i];
+    var c0 = row.insertCell(0);
+    c0.innerHTML = '<div class="company-logo">' + job.logo + '</div>';
+    var c1 = row.insertCell(1);
+    c1.innerHTML = '<strong style="color: #ffffff;">' + job.title + '</strong>';
+    var c2 = row.insertCell(2);
+    c2.innerHTML = job.company;
+    var c3 = row.insertCell(3);
+    var badgeClass = "";
+    switch (job.type) {
+      case "Full-time":
+        badgeClass = "badge-primary";
+        break;
+      case "Internship":
+        badgeClass = "badge-accent";
+        break;
+      case "Contract":
+        badgeClass = "badge-secondary";
+        break;
+      case "Part-time":
+        badgeClass = "badge-success";
+        break;
+      default:
+        badgeClass = "badge-primary";
+        break;
+    }
+    c3.innerHTML = '<span class="badge ' + badgeClass + '">' + job.type + '</span>';
+    var c4 = row.insertCell(4);
+    c4.innerHTML = "📍 " + job.location;
+    var c5 = row.insertCell(5);
+    c5.innerHTML = '<span class="job-salary">' + job.salary + '</span>';
+    var c6 = row.insertCell(6);
+    var tagsHtml = "";
+    for (var t = 0; t < job.tags.length; t++) {
+      tagsHtml = tagsHtml + '<span class="tag">' + job.tags[t] + '</span> ';
+    }
+    c6.innerHTML = tagsHtml;
+    var c7 = row.insertCell(7);
+    c7.innerHTML = '<span style="color: #72738b;">' + job.posted + '</span>';
+    var c8 = row.insertCell(8);
+    c8.innerHTML = '<button class="btn-primary btn-sm" onclick="applyJob(\'' + job.title + '\')">Apply</button>';
+  }
 }
 
-// ==========================================
-// FORM HANDLERS
-// ==========================================
+function applyJob(title) {
+  var confirmed = confirm("Are you sure you want to apply for \"" + title + "\"?");
+  if (confirmed) {
+    showToast("Application submitted for " + title + "!");
+  }
+}
+function filterJobs() {
+  var typeVal = document.getElementById("filterJobType").value;
+  var locVal = document.getElementById("filterJobLocation").value;
+  var searchEl = document.getElementById("jobSearch");
+  var searchVal = searchEl ? searchEl.value.toLowerCase().trim() : "";
+
+  var filtered = [];
+
+  for (var i = 0; i < jobsData.length; i++) {
+    var j = jobsData[i];
+    var matchType = (typeVal === "" || j.type === typeVal);
+    var matchLoc = (locVal === "" || j.location === locVal);
+    var matchSearch = true;
+
+    if (searchVal.length > 0) {
+      matchSearch = (j.title.toLowerCase().indexOf(searchVal) !== -1) ||
+                    (j.company.toLowerCase().indexOf(searchVal) !== -1);
+    }
+
+    if (matchType && matchLoc && matchSearch) {
+      filtered.push(j);
+    }
+  }
+
+  renderJobsTable(filtered);
+}
+function renderEvents() {
+  var container = document.getElementById("eventsContainer");
+  if (!container) return;
+
+  var html = "";
+  for (var i = 0; i < eventsData.length; i++) {
+    var e = eventsData[i];
+    html = html + '<div class="event-box">';
+    html = html + '  <div class="event-card">';
+    html = html + '    <div class="event-banner" style="background: ' + e.bg + ';">';
+    html = html + '      <span>' + e.emoji + '</span>';
+    html = html + '      <div class="event-date-badge">';
+    html = html + '        <span class="day">' + e.date + '</span>';
+    html = html + '        <span class="month">' + e.month + '</span>';
+    html = html + '      </div>';
+    html = html + '    </div>';
+    html = html + '    <div class="event-body">';
+    html = html + '      <h3>' + e.title + '</h3>';
+    html = html + '      <p>' + e.desc + '</p>';
+    html = html + '      <div class="event-meta">';
+    html = html + '        <span>🕐 ' + e.time + '</span>';
+    html = html + '        <span>📍 ' + e.venue + '</span>';
+    html = html + '        <span>👥 ' + e.attendees + '</span>';
+    html = html + '      </div>';
+    html = html + '      <button class="btn-primary btn-sm" onclick="handleRsvp(this, \'' + e.title.replace(/'/g, "\\'") + '\')">RSVP Now</button>';
+    html = html + '    </div>';
+    html = html + '  </div>';
+    html = html + '</div>';
+  }
+
+  container.innerHTML = html;
+}
+
+function handleRsvp(btn, eventTitle) {
+  var text = btn.innerHTML.trim();
+  if (text.indexOf("RSVP") !== -1) {
+    btn.innerHTML = "✓ Registered";
+    btn.className = "btn-secondary btn-sm";
+    btn.style.borderColor = "#0d9488";
+    btn.style.color = "#22d3ee";
+    showToast("You've registered for \"" + eventTitle + "\"!");
+  } else {
+    btn.innerHTML = "RSVP Now";
+    btn.className = "btn-primary btn-sm";
+    btn.style.borderColor = "";
+    btn.style.color = "";
+    showToast("Registration cancelled for \"" + eventTitle + "\".");
+  }
+}
+function renderMentors() {
+  var container = document.getElementById("mentorsContainer");
+  if (!container) return;
+
+  var html = "";
+
+  for (var i = 0; i < mentorsData.length; i++) {
+    var m = mentorsData[i];
+    var tagsHtml = "";
+    for (var key in m.expertise) {
+      if (m.expertise.hasOwnProperty(key)) {
+        tagsHtml = tagsHtml + '<span class="badge badge-primary" style="margin: 2px;">' + m.expertise[key] + '</span>';
+      }
+    }
+
+    html = html + '<div class="mentor-box">';
+    html = html + '  <div class="mentor-card">';
+    html = html + '    <div class="mentor-avatar">' + m.initials + '</div>';
+    html = html + '    <h3>' + m.name + '</h3>';
+    html = html + '    <p class="mentor-title">' + m.title + '</p>';
+    html = html + '    <p class="mentor-company">' + m.company + '</p>';
+    html = html + '    <div class="mentor-tags">' + tagsHtml + '</div>';
+    html = html + '    <div class="mentor-stats">';
+    html = html + '      <div><strong>' + m.sessions + '</strong><span>Sessions</span></div>';
+    html = html + '      <div><strong>⭐ ' + m.rating + '</strong><span>Rating</span></div>';
+    html = html + '    </div>';
+    html = html + '    <button class="btn-primary btn-sm" style="width:100%; text-align:center;" onclick="requestMentor(\'' + m.name + '\')">Request Mentorship</button>';
+    html = html + '  </div>';
+    html = html + '</div>';
+  }
+
+  container.innerHTML = html;
+}
+
+function requestMentor(name) {
+  showToast("Mentorship request sent to " + name + "!");
+}
+function switchTab(tab) {
+  var loginTab = document.getElementById("loginTab");
+  var registerTab = document.getElementById("registerTab");
+  var loginForm = document.getElementById("loginForm");
+  var registerForm = document.getElementById("registerForm");
+
+  if (!loginTab || !registerTab) return;
+  if (tab === "login") {
+    loginTab.className = "auth-tab active";
+    registerTab.className = "auth-tab";
+    loginForm.className = "auth-form active";
+    registerForm.className = "auth-form";
+  } else {
+    registerTab.className = "auth-tab active";
+    loginTab.className = "auth-tab";
+    registerForm.className = "auth-form active";
+    loginForm.className = "auth-form";
+  }
+}
 
 function handleLogin(e) {
   e.preventDefault();
-  showToast('Welcome back! Login successful.');
+  alert("Welcome back! Login successful. 🎉");
+  showToast("Welcome back! Login successful.");
   e.target.reset();
   return false;
 }
 
 function handleRegister(e) {
   e.preventDefault();
-  const pass = document.getElementById('regPassword').value;
-  const confirm = document.getElementById('regConfirm').value;
-  if (pass !== confirm) {
-    showToast('Passwords do not match!', true);
-    return false;
+  var isValid = true;
+  var firstName = document.getElementById("regFirstName").value;
+  var nameError = document.getElementById("nameError");
+  var nameRegex = new RegExp("^[a-zA-Z][a-zA-Z0-9]{5,}$");
+  if (!nameRegex.test(firstName)) {
+    nameError.className = "error-msg show";
+    document.getElementById("regFirstName").className = "error";
+    isValid = false;
+  } else {
+    nameError.className = "error-msg";
+    document.getElementById("regFirstName").className = "success";
   }
-  showToast('Account created successfully! Welcome to AlumniConnect.');
-  e.target.reset();
+  var phone = document.getElementById("regPhone").value;
+  var phoneError = document.getElementById("phoneError");
+  var phoneRegex = new RegExp("^[0-9]{10}$");
+  if (!phoneRegex.test(phone)) {
+    phoneError.className = "error-msg show";
+    document.getElementById("regPhone").className = "error";
+    isValid = false;
+  } else {
+    phoneError.className = "error-msg";
+    document.getElementById("regPhone").className = "success";
+  }
+  var email = document.getElementById("regEmail").value;
+  var emailError = document.getElementById("emailError");
+  var emailRegex = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+  if (!emailRegex.test(email)) {
+    emailError.className = "error-msg show";
+    document.getElementById("regEmail").className = "error";
+    isValid = false;
+  } else {
+    emailError.className = "error-msg";
+    document.getElementById("regEmail").className = "success";
+  }
+  var pass = document.getElementById("regPassword").value;
+  var confirmPass = document.getElementById("regConfirm").value;
+  var passError = document.getElementById("passError");
+  if (pass !== confirmPass) {
+    passError.className = "error-msg show";
+    document.getElementById("regConfirm").className = "error";
+    isValid = false;
+  } else {
+    passError.className = "error-msg";
+    document.getElementById("regConfirm").className = "success";
+  }
+  if (isValid) {
+    var displayName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1).toLowerCase();
+    alert("Account created successfully! Welcome, " + displayName + "! 🎉\nYour name length: " + firstName.length + " characters.");
+    showToast("Account created! Welcome to AlumniConnect, " + displayName + ".");
+    e.target.reset();
+    nameError.className = "error-msg";
+    phoneError.className = "error-msg";
+    emailError.className = "error-msg";
+    passError.className = "error-msg";
+  } else {
+    showToast("Please fix the errors in the form.", true);
+  }
+
   return false;
 }
 
 function handlePostJob(e) {
   e.preventDefault();
-  showToast('Job posted successfully! It will appear on the board shortly.');
-  closeModal('postJobModal');
+  showToast("Job posted successfully! It will appear on the board shortly.");
+  closeModal("postJobModal");
   e.target.reset();
   return false;
 }
 
 function handleContact(e) {
   e.preventDefault();
-  showToast('Message sent! We will get back to you within 24 hours.');
+  showToast("Message sent! We will get back to you within 24 hours.");
   e.target.reset();
   return false;
 }
-
-// ==========================================
-// TOAST
-// ==========================================
-
-function showToast(message, isError = false) {
-  const toast = document.getElementById('toast');
-  const msg = document.getElementById('toastMessage');
+function showToast(message, isError) {
+  var toast = document.getElementById("toast");
+  var msg = document.getElementById("toastMessage");
   if (!toast || !msg) return;
 
-  msg.textContent = message;
-  toast.style.borderColor = isError ? '#ef4444' : 'var(--secondary)';
-  toast.querySelector('.toast-icon').style.background = isError ? 'rgba(239,68,68,0.15)' : 'rgba(13,148,136,0.15)';
-  toast.querySelector('.toast-icon').style.color = isError ? '#ef4444' : 'var(--secondary-light)';
-  toast.querySelector('.toast-icon').textContent = isError ? '!' : '✓';
-  toast.classList.add('show');
+  msg.innerHTML = message;
 
-  setTimeout(() => toast.classList.remove('show'), 3500);
+  var icon = toast.getElementsByClassName("toast-icon")[0];
+  if (isError) {
+    toast.style.borderColor = "#ef4444";
+    icon.style.backgroundColor = "rgba(239,68,68,0.15)";
+    icon.style.color = "#ef4444";
+    icon.innerHTML = "!";
+  } else {
+    toast.style.borderColor = "rgba(108,99,255,0.3)";
+    icon.style.backgroundColor = "rgba(34,197,94,0.15)";
+    icon.style.color = "#4ade80";
+    icon.innerHTML = "✓";
+  }
+
+  toast.className = "toast show";
+  setTimeout(function() {
+    toast.className = "toast";
+  }, 3500);
 }
-
-// ==========================================
-// MODAL
-// ==========================================
-
 function openModal(id) {
-  const modal = document.getElementById(id);
+  var modal = document.getElementById(id);
   if (modal) {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    modal.className = "modal-overlay active";
+    document.body.style.overflow = "hidden";
   }
 }
 
 function closeModal(id) {
-  const modal = document.getElementById(id);
+  var modal = document.getElementById(id);
   if (modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
+    modal.className = "modal-overlay";
+    document.body.style.overflow = "";
   }
 }
-
-// Close modal on overlay click
-document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('modal-overlay')) {
-    e.target.classList.remove('active');
-    document.body.style.overflow = '';
+document.onclick = function(e) {
+  if (e.target.className && e.target.className.indexOf("modal-overlay active") !== -1) {
+    e.target.className = "modal-overlay";
+    document.body.style.overflow = "";
   }
-});
-
-// Close modal on Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    document.querySelectorAll('.modal-overlay.active').forEach(m => {
-      m.classList.remove('active');
-    });
-    document.body.style.overflow = '';
+};
+document.onkeydown = function(e) {
+  if (e.key === "Escape") {
+    var modals = document.getElementsByClassName("modal-overlay active");
+    var count = modals.length;
+    var idx = 0;
+    if (count > 0) {
+      do {
+        modals[0].className = "modal-overlay";
+        idx++;
+      } while (idx < count && modals.length > 0);
+      document.body.style.overflow = "";
+    }
   }
-});
-
-// ==========================================
-// ALUMNI DIRECTORY
-// ==========================================
-
-function renderProfiles(data = alumniData) {
-  const grid = document.getElementById('profilesGrid');
-  if (!grid) return;
-
-  if (data.length === 0) {
-    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;"><h3 style="color:var(--text-secondary);">No alumni found matching your criteria.</h3><p style="color:var(--text-muted);margin-top:8px;">Try adjusting your filters or search terms.</p></div>';
-    return;
-  }
-
-  grid.innerHTML = data.map((p, i) => `
-    <div class="profile-card glass-card" onclick="showProfile(${i})" style="animation: fadeInUp 0.5s ease ${i * 0.08}s both;">
-      <div class="profile-avatar">${p.initials}</div>
-      <h3>${p.name}</h3>
-      <p class="role">${p.role} at ${p.company}</p>
-      <p class="batch">Batch of ${p.batch} · ${p.dept}</p>
-      <div class="profile-tags">
-        ${p.skills.map(s => `<span class="tag">${s}</span>`).join('')}
-      </div>
-      <button class="btn btn-secondary btn-sm profile-btn">View Profile</button>
-    </div>
-  `).join('');
-}
-
-function showProfile(index) {
-  const p = alumniData[index];
-  document.getElementById('modalName').textContent = p.name;
-  document.getElementById('modalAvatar').textContent = p.initials;
-  document.getElementById('modalRole').textContent = p.role;
-  document.getElementById('modalCompany').textContent = p.company;
-  document.getElementById('modalBatch').textContent = p.batch;
-  document.getElementById('modalDept').textContent = p.dept;
-  document.getElementById('modalLocation').textContent = p.location;
-  document.getElementById('modalEmail').textContent = p.email;
-  document.getElementById('modalSkills').innerHTML = p.skills.map(s => `<span class="badge badge-primary">${s}</span>`).join('');
-  openModal('profileModal');
-}
-
-function filterProfiles() {
-  const search = (document.getElementById('directorySearch')?.value || '').toLowerCase();
-  const batch = document.getElementById('filterBatch')?.value || '';
-  const dept = document.getElementById('filterDept')?.value || '';
-  const location = document.getElementById('filterLocation')?.value || '';
-
-  const filtered = alumniData.filter(p => {
-    const matchSearch = !search || p.name.toLowerCase().includes(search) || p.company.toLowerCase().includes(search) || p.skills.some(s => s.toLowerCase().includes(search));
-    const matchBatch = !batch || p.batch === batch;
-    const matchDept = !dept || p.dept === dept;
-    const matchLocation = !location || p.location === location;
-    return matchSearch && matchBatch && matchDept && matchLocation;
-  });
-
-  renderProfiles(filtered);
-}
-
-// ==========================================
-// JOBS
-// ==========================================
-
-function renderJobs(data = jobsData) {
-  const grid = document.getElementById('jobsGrid');
-  if (!grid) return;
-
-  if (data.length === 0) {
-    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;"><h3 style="color:var(--text-secondary);">No jobs found matching your criteria.</h3></div>';
-    return;
-  }
-
-  grid.innerHTML = data.map((j, i) => `
-    <div class="job-card glass-card" style="animation: fadeInUp 0.5s ease ${i * 0.08}s both;">
-      <div class="job-header">
-        <span class="badge ${j.type === 'Internship' ? 'badge-accent' : j.type === 'Contract' ? 'badge-secondary' : 'badge-primary'}">${j.type}</span>
-        <div class="company-logo">${j.logo}</div>
-      </div>
-      <h3>${j.title}</h3>
-      <p class="company-name">${j.company}</p>
-      <div class="job-info">
-        <span>📍 ${j.location}</span>
-        <span>🕐 ${j.posted}</span>
-      </div>
-      <div class="job-tags">
-        ${j.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-      </div>
-      <div class="job-footer">
-        <span class="salary">${j.salary}</span>
-        <button class="btn btn-primary btn-sm" onclick="showToast('Application submitted for ${j.title}!')">Apply →</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-function filterJobs() {
-  const search = (document.getElementById('jobSearch')?.value || '').toLowerCase();
-  const type = document.getElementById('filterJobType')?.value || '';
-  const location = document.getElementById('filterJobLocation')?.value || '';
-
-  const filtered = jobsData.filter(j => {
-    const matchSearch = !search || j.title.toLowerCase().includes(search) || j.company.toLowerCase().includes(search) || j.tags.some(t => t.toLowerCase().includes(search));
-    const matchType = !type || j.type === type;
-    const matchLocation = !location || j.location === location;
-    return matchSearch && matchType && matchLocation;
-  });
-
-  renderJobs(filtered);
-}
-
-// ==========================================
-// EVENTS
-// ==========================================
-
-function renderEvents() {
-  const grid = document.getElementById('eventsGrid');
-  if (!grid) return;
-
-  grid.innerHTML = eventsData.map((e, i) => `
-    <div class="event-card glass-card" style="animation: fadeInUp 0.5s ease ${i * 0.1}s both;">
-      <div class="event-banner" style="background: ${e.gradient};">
-        <span>${e.icon}</span>
-        <div class="event-date-badge">
-          <span class="day">${e.date}</span>
-          <span class="month">${e.month}</span>
-        </div>
-      </div>
-      <div class="event-body">
-        <h3>${e.title}</h3>
-        <p>${e.desc}</p>
-        <div class="event-meta">
-          <span>🕐 ${e.time}</span>
-          <span>📍 ${e.venue}</span>
-          <span>👥 ${e.attendees}</span>
-        </div>
-        <button class="btn btn-primary btn-sm" onclick="handleRsvp(this, '${e.title}')">RSVP Now</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-function handleRsvp(btn, eventTitle) {
-  if (btn.textContent.trim() === 'RSVP Now') {
-    btn.textContent = '✓ Registered';
-    btn.classList.remove('btn-primary');
-    btn.classList.add('btn-secondary');
-    btn.style.borderColor = 'var(--secondary)';
-    btn.style.color = 'var(--secondary-light)';
-    showToast(`You've registered for "${eventTitle}"!`);
-  } else {
-    btn.textContent = 'RSVP Now';
-    btn.classList.remove('btn-secondary');
-    btn.classList.add('btn-primary');
-    btn.style.borderColor = '';
-    btn.style.color = '';
-    showToast(`Registration cancelled for "${eventTitle}".`);
-  }
-}
-
-// ==========================================
-// MENTORS
-// ==========================================
-
-function renderMentors() {
-  const grid = document.getElementById('mentorsGrid');
-  if (!grid) return;
-
-  grid.innerHTML = mentorsData.map((m, i) => `
-    <div class="mentor-card glass-card" style="animation: fadeInUp 0.5s ease ${i * 0.1}s both;">
-      <div class="mentor-avatar">${m.initials}</div>
-      <h3>${m.name}</h3>
-      <p class="mentor-title">${m.title}</p>
-      <p class="mentor-company">${m.company}</p>
-      <div class="mentor-tags">
-        ${m.expertise.map(e => `<span class="badge badge-primary">${e}</span>`).join('')}
-      </div>
-      <div class="mentor-stats">
-        <div>
-          <strong>${m.sessions}</strong>
-          <span>Sessions</span>
-        </div>
-        <div>
-          <strong>⭐ ${m.rating}</strong>
-          <span>Rating</span>
-        </div>
-      </div>
-      <button class="btn btn-primary btn-sm" style="width:100%;justify-content:center;" onclick="showToast('Mentorship request sent to ${m.name}!')">Request Mentorship</button>
-    </div>
-  `).join('');
-}
-
-// ==========================================
-// FAQ ACCORDION
-// ==========================================
-
+};
 function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const wasActive = item.classList.contains('active');
-
-  // Close all
-  document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('active'));
-
-  // Toggle clicked
-  if (!wasActive) {
-    item.classList.add('active');
+  var item = btn.parentElement;
+  var wasActive = item.className.indexOf("active") !== -1;
+  var allItems = document.getElementsByClassName("faq-item");
+  for (var i = 0; i < allItems.length; i++) {
+    allItems[i].className = "faq-item";
   }
+  if (!wasActive) {
+    item.className = "faq-item active";
+  }
+}
+function getRandomGreeting() {
+  var greetings = [
+    "Welcome back, Champion! 🏆",
+    "Great to see you! 🌟",
+    "Hello, Fellow Alumnus! 👋",
+    "Ready to connect? 🤝",
+    "Let's grow together! 🌱"
+  ];
+  var randomIndex = Math.floor(Math.random() * greetings.length);
+  return greetings[randomIndex];
+}
+function getAllBatches() {
+  var batches = [];
+  for (var item of alumniData) {
+    if (batches.indexOf(item.batch) === -1) {
+      batches.push(item.batch);
+    }
+  }
+  return batches;
+}
+function printAlumniDetails(index) {
+  var alumni = alumniData[index];
+  var details = "";
+  for (var key in alumni) {
+    if (alumni.hasOwnProperty(key)) {
+      details = details + key.toUpperCase() + ": " + alumni[key] + "\n";
+    }
+  }
+  return details;
 }
