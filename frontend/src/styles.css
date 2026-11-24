@@ -1945,3 +1945,23 @@ dl.info-dl dd {
   background-size: cover;
   padding: 60px 0;
 }
+
+
+/* Hero Glow Effects */
+.hero-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+.glow-1 {
+  background-color: #6c63ff;
+  top: 10%;
+  left: -5%;
+}
+.glow-2 {
+  background-color: #06b6d4;
+  bottom: 10%;
+  right: -3%;
+}
